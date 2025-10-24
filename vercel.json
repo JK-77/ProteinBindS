@@ -1,18 +1,12 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
   "functions": {
     "src/app/api/**/*.ts": {
       "maxDuration": 30
     }
   },
   "env": {
-    "NEXTAUTH_URL": "https://proteinbind.vercel.app",
+    "NEXTAUTH_URL": "https://protein-bind-q.vercel.app",
     "NEXTAUTH_SECRET": "@nextauth_secret"
   }
 }
