@@ -1,6 +1,8 @@
 {
-  "name": "free-nextjs-admin-dashboard",
-  "version": "1.3.4",
+  "name": "proteinbind",
+  "version": "1.0.0",
+  "description": "Advanced Drug Discovery Platform with AI-powered molecular generation",
+  "author": "JK-77 (Jayesh Kriplani)",
   "private": true,
   "scripts": {
     "dev": "next dev",
