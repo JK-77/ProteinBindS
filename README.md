@@ -1,8 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://www.youtube.com/channel/UC-YsuP1JJVYUj9ivM9uBtEQ" target="_blank">
-      <img src="./public/drug_research.jpg" alt="ProteinBind Project Banner">
-    </a>
+    <img src="./public/drug_research.jpg" alt="ProteinBind Project Banner" width="600">
   
   <br />
 
@@ -14,122 +12,174 @@
   </div>
 
   <h3 align="center">ProteinBind</h3>
-
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@albertmends" target="_blank"><b>Your YouTube Channel</b></a>. Join the community!
-    </div>
+  <p align="center">Advanced Drug Discovery Platform</p>
+  <p align="center">Created by <strong>JK-77 (Jayesh Kriplani)</strong></p>
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
+## 📋 Table of Contents
 
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🧬 [Protein Data Processing](#protein-data)
-6. 🚀 [More](#more)
+6. 🚀 [Deployment](#deployment)
+7. 📞 [Contact](#contact)
 
-## 🚨 Tutorial
+## 🤖 Introduction
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@albertmends/videos" target="_blank"><b>Code with Albert</b></a>.
+**ProteinBind** is a cutting-edge drug discovery and protein-binding prediction platform built with the latest AI/ML technologies. This comprehensive platform enables researchers to simulate molecular interactions, predict protein structures, and accelerate drug discovery processes.
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+### Key Capabilities:
+- **AI-Powered Molecular Generation** using NVIDIA NIM models
+- **Real-time Molecular Visualization** with RDKit integration
+- **Collaborative Research Environment** with real-time chat
+- **Comprehensive Compound Database** with PubChem integration
+- **Advanced Analytics** and molecular property prediction
 
-## <a name="introduction">🤖 Introduction</a>
+## ⚙️ Tech Stack
 
-**ProteinBind** is a drug discovery and protein-binding prediction tool built with the latest in machine learning and natural language processing (NLP) technology. Powered by NVIDIA NIM and protein structure prediction models, this project enables users to simulate molecular interactions and predict protein structures.
+### Frontend
+- **Next.js 14** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **React 18** with modern hooks
 
-The platform is designed to help researchers accelerate drug discovery by leveraging cutting-edge AI models for protein folding, docking, and molecular dynamics.
+### Backend
+- **Express.js** proxy server
+- **NVIDIA API** integration
+- **MongoDB** with Mongoose
+- **NextAuth.js** for authentication
 
-If you're getting started and need assistance or face any bugs, join our active Discord community. It's a place where people help each other out.
+### AI/ML Integration
+- **NVIDIA NIM** for protein structure prediction
+- **RDKit** for molecular visualization
+- **CMA-ES Algorithm** for molecular optimization
 
-<a href="https://discord.com/channels/1221368900579754074/1221368901162631243" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e"  /></a>
+## 🔋 Features
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+### 🧬 Molecular Generation
+- Generate novel molecular structures from SMILES strings
+- AI-powered optimization using CMA-ES algorithm
+- Real-time molecular visualization
+- Property scoring and analysis
 
-- **Next.js**
-- **TypeScript**
-- **NVIDIA** (for protein structure prediction)
-- **Tailwind CSS**
-- **React Chart.js** (for visualizing protein data)
+### 🏦 Molecule Bank
+- Curated database of common molecules
+- Advanced search and filtering
+- Molecular weight and usage categorization
+- Interactive structure display
 
-## <a name="features">🔋 Features</a>
+### 🔬 Research Tools
+- PubChem API integration
+- Comprehensive compound data lookup
+- Molecular property analysis
+- Structure-activity relationship studies
 
-👉 **Protein Structure Prediction**: Predicts 2D protein structures using NVIDIA models.
+### 💬 Collaborative Features
+- Real-time chat system
+- Research group collaboration
+- Message history and persistence
+- User authentication and profiles
 
-👉 **Collaborative Research**: Researches can create groups and colloborate with other research online
+### 📱 User Experience
+- Responsive design for all devices
+- Dark/light mode support
+- Intuitive user interface
+- Professional dashboard
 
-👉 **Responsive Design**: Ensures seamless experience across all devices, from desktops to mobile.
+## 🤸 Quick Start
 
-## <a name="quick-start">🤸 Quick Start</a>
+### Prerequisites
 
-Follow these steps to set up the project locally on your machine.
-
-### **Prerequisites**
-
-Make sure you have the following installed on your machine:
-
+Make sure you have the following installed:
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+- [Node.js](https://nodejs.org/en) (v18 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### **Cloning the Repository**
+### Installation
 
+1. **Clone the repository**
 ```bash
-git clone https://github.com/mendsalbert/ProteinBind.git
-cd proteinbind
+git clone https://github.com/JK-77/ProteinBindS.git
+cd ProteinBindS
 ```
 
-### **Installation**
-
-Install the project dependencies using npm:
-
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-### **Set Up Environment Variables**
-
-Create a new file named `.env` in the root of your project and add the following content:
-
+3. **Set up environment variables**
+Create a `.env.local` file in the root directory:
 ```env
+NEXTAUTH_SECRET=your-nextauth-secret-key
+NEXTAUTH_URL=http://localhost:3000
+MONGODB_URL=mongodb://localhost:27017/proteinBind
 NEXT_PUBLIC_NVIDIA_API_KEY=your-nvidia-api-key
-
-ABLY_API_KEY='your-ably-api-key'
-
-MONGODB_URL='your-mongodb-url'
-
+ABLY_API_KEY=your-ably-api-key
+RESEND_KEY=your-resend-api-key
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
-
-RESEND_KEY='your-resend-api-key'
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5050/api/generate
 ```
 
-### **Running the Project**
-
+4. **Start the development server**
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+5. **Start the backend server** (in a separate terminal)
+```bash
+cd backend
+npm install
+npm start
+```
 
-## <a name="protein-data">🧬 Protein Data Processing</a>
+6. **Access the application**
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This section covers the protein data processing pipeline, including loading protein structure files (e.g., PDB format), performing molecular docking simulations, and visualizing the results.
+## 🧬 Protein Data Processing
 
-### **Protein Structure Input**
+### Molecular Structure Analysis
+- **SMILES Input**: Generate molecules from chemical notation
+- **Structure Optimization**: AI-powered molecular property optimization
+- **Visualization**: Real-time 2D molecular structure rendering
+- **Property Prediction**: QED scores and molecular descriptors
 
-Users can upload PDB files for protein structures, which will then be processed by NVIDIA NeMo's protein-folding models.
+### Data Pipeline
+- **Input Processing**: SMILES string validation and parsing
+- **AI Generation**: NVIDIA API integration for molecular optimization
+- **Result Analysis**: Property scoring and similarity analysis
+- **Storage**: User history and molecule database
 
-### **Docking Simulation**
+## 🚀 Deployment
 
-Using molecular docking algorithms, the system predicts how small molecules (such as drug candidates) bind to protein targets.
+### Vercel Deployment (Frontend)
+1. Connect your GitHub repository to Vercel
+2. Set environment variables in Vercel dashboard
+3. Deploy automatically on push to main branch
 
-## <a name="more">🚀 More</a>
+### Backend Deployment
+Deploy the backend server to platforms like:
+- **Railway** (recommended)
+- **Render**
+- **Heroku**
 
-Stay tuned for more updates and features! Join our community, contribute to the repository, and follow along with our detailed tutorials.
+See `VERCEL_DEPLOYMENT.md` for detailed deployment instructions.
 
-## 📞 **Contact & Community**
+## 📞 Contact
 
-If you have any questions or need support, feel free to join our Discord server or contact us through GitHub Discussions.
+**Developer**: JK-77 (Jayesh Kriplani)
+- **GitHub**: [@JK-77](https://github.com/JK-77)
+- **Email**: jayeshkriplani9@gmail.com
 
-<a href="https://discord.com/channels/1221368900579754074/1221368901162631243" target="_blank">Join Discord</a> | <a href="https://github.com/mendsalbert/proteinbind/discussions" target="_blank">GitHub Discussions</a>
+### Support
+- **Issues**: [GitHub Issues](https://github.com/JK-77/ProteinBindS/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/JK-77/ProteinBindS/discussions)
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by <strong>JK-77</strong></p>
+  <p>© 2025 ProteinBind. All rights reserved.</p>
+</div>
